@@ -5,9 +5,11 @@
 
   async function get_all_proposals() {
     let dao = get(daoActor);
+    console.log("XXXXXXXXXXXXXXXXX dao", dao)
     if (!dao) {
       return
     }
+    console.log("Proposals coming")
     let res = await dao.get_all_proposals()
     console.log("Proposals", res)
     return res
@@ -20,7 +22,7 @@
     <p>Loading...</p>
   {:then proposals}
     <div id="proposals">
-      <h1>Proposals</h1>
+      <h1>Proposals:</h1>
       {#each proposals as post}
         <Proposal {post} />
       {/each}
