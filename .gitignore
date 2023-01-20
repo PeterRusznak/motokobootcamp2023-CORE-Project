@@ -11,8 +11,10 @@
 # dfx temporary files
 .dfx/
 
+src/declarations/dao/dao.did.d.ts
+
 # generated files
-src/declarations/
+src/declarations/*
 
 # frontend code
 node_modules/

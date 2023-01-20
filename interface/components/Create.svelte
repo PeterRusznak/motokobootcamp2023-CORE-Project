@@ -39,7 +39,7 @@
     {#await promise}
       <p style="color: white">...waiting</p>
     {:then proposal}
-      <p style="color: white">Proposal created with payload {proposal}</p>
+      <p style="color: white">Proposal created with payload {proposal.text}</p>
     {:catch error}
       <p style="color: red">{error.message}</p>
     {/await}
